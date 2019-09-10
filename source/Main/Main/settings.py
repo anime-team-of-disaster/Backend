@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
+#emial backend
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 import os
 
