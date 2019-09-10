@@ -1,3 +1,4 @@
+import os
 """
 Django settings for Main project.
 
@@ -9,11 +10,9 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
+
 #emial backend
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-import os
-from oscar import get_core_apps
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -44,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.flatpages',
     'south',
     'compressor',
-] + get_core_apps()
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -54,7 +53,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'oscar.apps.basket.middleware.BasketMiddleware',
     'django.middleware.transaction.TransctionMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware'
 ]
@@ -72,11 +70,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                    'oscar.apps.search.context_processors.search_form',
-                    'oscar.apps.promotions.context_processors.promotions',
-                    'oscar.apps.checkout.context_processors.checkout',
-                    'oscar.apps.customer.notifications.context_processors.notifications',
-                    'oscar.apps.context_processors.metadata',
             ],
         },
     },
@@ -85,20 +78,16 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Main.wsgi.application'
 
 
-AUTHENTICATION_BACKNDS = (
-    'oscar.apps.customer.auth_backends.Emailbackend',
-    'django.contrib.auth.backends.ModelBackend',
-)
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+     }
+ }
 
 
 # Password validation
