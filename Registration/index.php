@@ -1,3 +1,4 @@
+<?php require_once 'controllers/authController.php'; ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,20 +11,28 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 offset-md-4 form-div login">
-                <div class="alert alert-success"></div>
-                Zostałeś Zalogowany
+                <div class="alert <?php echo $_SESSION['alert-class'];  ?>"></div>
+                <?php
+                 echo $_SESSION['message']; 
+                 unsert($_SESSION['message']);
+                 unsert($_SESSION['alert-class']);
+                ?>
             </div>
-            <h3>Witaj!, </h3>
+            <h3>Witaj!, <?php echo $_SESSION['username'];  ?></h3>
             <a href="#"class="logout">Wyloguj się</a>
 
-            <div class="alert alert-warning">
-                Na twój adres Email został wysłany link
-                Potwierdzający!
-                <strong></strong>
-            </div>
 
-            <button class="btn btn-block btn-lg btn-primary">Zostałeś zweryfikowany :)</button>
+            <?php if(!$_SESSION['verified']): ?>
+                <div class="alert alert-warning">
+                    Na twój adres Email został wysłany link
+                    Potwierdzający!
+                    <strong><?php echo $_SESSION['email'];  ?></strong>
+                </div>
+            <?php endif; ?>
 
+            <?php if($_SESSION['verified']): ?>
+                <button class="btn btn-block btn-lg btn-primary">Zostałeś zweryfikowany :)</button>
+            <?php endif; ?>
 		</div>
 	</div>
 
