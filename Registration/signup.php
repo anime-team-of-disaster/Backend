@@ -1,3 +1,4 @@
+<?php require_once 'controllers/authController.php'; ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -12,18 +13,23 @@
 			<div class="col-md-4 offset-md-4 form-div">
 				<form action="signup.php" method="post">
 				<h3 class="text-center">Rejestracja</h3>
+
+				<?php if(count($errors) > 0): ?>
 				<div class="alert alert-danger">
-					<li>Nazwa użytkownika jest wymagana!</li>
+					<?php foreach($errors as $error): ?>
+						<li><?php echo $error; ?></li>
+					<?php endforeach; ?>
 				</div>
+				<?php endif; ?>
 
 				<div class="form-group">
 					<label for="username">Nazwa użytkownika</label>
-					<input type="text" name="username" class="form-control form-control-lg">
+					<input type="text" name="username" value="<?php echo $username; ?>" class="form-control form-control-lg">
 				</div>
 
 				<div class="form-group">
 					<label for="Email">Email</label>
-					<input type="Email" name="Email" class="form-control form-control-lg">
+					<input type="Email" name="Email" value="<?php echo $email; ?>" class="form-control form-control-lg">
 				</div>
 
 				<div class="form-group">

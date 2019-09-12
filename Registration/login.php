@@ -11,10 +11,11 @@
 		<div class="row">
 			<div class="col-md-4 offset-md-4 form-div login">
 				<form action="login.php" method="post">
-				<h3 class="text-center">Logowanie</h3>
-				<div class="alert alert-danger">
+                <h3 class="text-center">Logowanie</h3>
+                
+				<!-- <div class="alert alert-danger">
 					<li>Nazwa użytkownika jest wymagana!</li>
-				</div>
+				</div> -->
 
 				<div class="form-group">
 					<label for="username">Nazwa użytkownika Lub Email</label>
