@@ -26,12 +26,12 @@
 
 				<div class="form-group">
 					<label for="username">Nazwa użytkownika</label>
-					<input type="text" name="username" value="<?php echo $username;?>" class="form-control form-control-lg">
+					<input type="text" name="username" value="<?php echo $username; ?>" class="form-control form-control-lg">
 				</div>
 
 				<div class="form-group">
-					<label for="Email">Email</label>
-					<input type="Email" name="Email" value="<?php echo $email;?>" class="form-control form-control-lg">
+					<label for="email">Email</label>
+					<input type="email" name="email" value="<?php echo $email; ?>" class="form-control form-control-lg">
 				</div>
 
 				<div class="form-group">
