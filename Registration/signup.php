@@ -6,11 +6,15 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	</head>
 	<body>
+
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 offset-md-4 form-div">
 				<form action="signup.php" method="post">
 				<h3 class="text-center">Rejestracja</h3>
+				<div class="alert alert-danger">
+					<li>Nazwa użytkownika jest wymagana!</li>
+				</div>
 
 				<div class="form-group">
 					<label for="username">Nazwa użytkownika</label>
