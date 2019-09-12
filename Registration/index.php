@@ -1,4 +1,11 @@
-<?php require_once 'controllers/authController.php'; ?>
+<?php 
+require_once 'controllers/authController.php'; 
+
+if (!isset($_SESSION['id'])) {
+    header('location: login.php');
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -24,7 +31,7 @@
             <?php endif; ?>
 
             <h3>Witaj!, <?php echo $_SESSION['username'];  ?></h3>
-            <a href="#"class="logout">Wyloguj się</a>
+            <a href="index.php?logout=1"class="logout">Wyloguj się</a>
 
 
             <?php if(!$_SESSION['verified']): ?>

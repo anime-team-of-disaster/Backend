@@ -73,3 +73,56 @@ if (isset($_POST['signup-btn'])) {
         }
     }
 }
+
+
+// jeśli użytnik kliknie w przycisk  logowania
+if (isset($_POST['login-btn'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    //walidacja 
+    if (empty($username)) {
+        $errors['username'] = 'Nazwa użytkownika jest wymagana';
+    }
+    if (empty($password)) {
+        $errors['password'] = 'Hasło jest wymagane';
+    }
+
+    if (count($errors) === 0 ) {
+        $sql = "SELECT *  FROM  users WHERE email=? OR username=? LIMIT 1";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param('ss', $username, $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $user = $result->fetch_assoc();
+    
+        if (password_verify($password, $user['password'])) {
+            //udane logowanko
+            $_SESSION['id'] = $user['id'];
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['verified'] = $user['verified'];
+            //flash message
+            $_SESSION['message'] = "Zostałeś Zalogowany!";
+            $_SESSION['alert-class'] = "alert-success";
+            header('location: index.php');
+            exit();
+        } else {
+            $errors['login_fail'] = "błędne dane uwierzytelniające"
+        }
+    }
+
+
+}
+
+
+// logout user
+if (isset($_GET[logout])) {
+    session_destroy();
+    unset($_SESSION['id']);
+    unset($_SESSION['username']);
+    unset($_SESSION['email']);
+    unset($_SESSION['verified']);
+    header('location: login.php');
+    exit();
+}
