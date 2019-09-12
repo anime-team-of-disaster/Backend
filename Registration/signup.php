@@ -14,13 +14,15 @@
 				<form action="signup.php" method="post">
 				<h3 class="text-center">Rejestracja</h3>
 
-				<?php if(count($errors) > 0): ?>
+				<?php if(count($errors) > 0 ): ?>
 				<div class="alert alert-danger">
-					<?php foreach($errors as $error): ?>
-						<li><?php echo $error; ?></li>
-					<?php endforeach; ?>
+				<?php foreach($errors as $error): ?>
+				<li><?php echo $error; ?></li>
+				<?php endforeach; ?>
 				</div>
 				<?php endif; ?>
+
+
 
 				<div class="form-group">
 					<label for="username">Nazwa użytkownika</label>
