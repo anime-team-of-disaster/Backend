@@ -1,6 +1,8 @@
 <?php require_once 'controllers/authController.php'; ?>
+
 <!DOCTYPE html>
-<html>
+
+<html lang="pl">
 	<head>
 		<title>Rejestracja użytkownika</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
