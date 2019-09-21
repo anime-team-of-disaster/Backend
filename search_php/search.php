@@ -13,14 +13,16 @@
         $resault = mysqli_query($conn, $sql);
         $queryResault = mysqli_num_rows($resault);
 
+        echo "znaleziono ".$queryResault." wyników!"
+
         if ($queryResault > 0 ) {
             while ($row = mysqli_fetch_assoc($resault)){
-                echo "<div class='article-box'>
+                echo "<a href='article.php?title=".$row['a_title']."&date=".$row['a_date']."'><div class='article-box'>
                     <h3>".$row['a_title']."</h3>
                     <p>".$row['a_text']."</p>
                     <p>".$row['a_date']."</p>
                     <p>".$row['a_author']."</p>
-                    </div>";
+                    </div></a>";
 
             }
         } else {
