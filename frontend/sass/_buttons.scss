@@ -1,0 +1,19 @@
+.btn {
+  background-color: transparent;
+  // background-image: linear-gradient(#ff4757, #ff6b81);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  margin: 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    // transform: translateY(-3px);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.6);
+  }
+}
+.register__btn {
+  background-image: linear-gradient(#ff4757, #ff6b81);
+}

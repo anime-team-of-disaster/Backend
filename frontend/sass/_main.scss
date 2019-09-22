@@ -1,11 +1,29 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
+$primaryBlack: #2f3542;
+$blackLight: #57606f;
+$primaryRed: #ff4757;
+$redLight: #ff6b81;
+$orange: #ff6348;
+$orangeLight: #ff7f50;
 
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+$bp-largePlus: 87.5em; //1400px
+$bp-large: 81.25em; //1300px
+$bp-bigPlus: 75em; //1200px
+$bp-big: 68.75em; // 1100px
