@@ -37,6 +37,12 @@ body {
           align-items: center;
 }
 
+.navigation__logo {
+  margin: 4.3rem 0 0 2rem;
+  width: 90px;
+  height: 90px;
+}
+
 .navigation__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -87,7 +93,7 @@ body {
 }
 
 .navigation__item {
-  margin-right: 5rem;
+  margin-right: 6rem;
 }
 
 @media screen and (max-width: 68.75em) {
@@ -107,7 +113,7 @@ body {
 }
 
 .navigation__item:nth-of-type(4) {
-  margin-right: 20rem;
+  margin-right: 40rem;
 }
 
 @media screen and (max-width: 87.5em) {

@@ -10,6 +10,15 @@
   justify-content: space-between;
   align-items: center;
 
+  &__logo {
+    // position: absolute;
+    // top: 0;
+    // left: 50px;
+    margin: 4.3rem 0 0 2rem;
+    width: 90px;
+    height: 90px;
+  }
+
   &__nav {
     display: flex;
     justify-content: center;
@@ -44,7 +53,7 @@
   }
 
   &__item {
-    margin-right: 5rem;
+    margin-right: 6rem;
     @media screen and (max-width: $bp-1100) {
       margin-right: 2.5rem;
     }
@@ -57,7 +66,7 @@
   }
 
   &__item:nth-of-type(4) {
-    margin-right: 20rem;
+    margin-right: 40rem;
     @media screen and (max-width: $bp-1400) {
       margin-right: 10rem;
     }
