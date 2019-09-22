@@ -49,6 +49,26 @@ body {
           align-items: center;
 }
 
+@media screen and (max-width: 62.5em) {
+  .navigation__nav {
+    position: absolute;
+    height: 100vh;
+    top: 100%;
+    background-color: #2f3542;
+    width: 30vw;
+    right: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transform: translateX(30vw);
+            transform: translateX(30vw);
+    visibility: hidden;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+}
+
 .navigation__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,12 +76,62 @@ body {
   list-style-type: none;
 }
 
+@media screen and (max-width: 62.5em) {
+  .navigation__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+}
+
 .navigation__item {
   margin-right: 5rem;
 }
 
+@media screen and (max-width: 68.75em) {
+  .navigation__item {
+    margin-right: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 62.5em) {
+  .navigation__item {
+    margin-right: 0;
+    margin: 1.5rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .navigation__item:nth-of-type(4) {
   margin-right: 20rem;
+}
+
+@media screen and (max-width: 87.5em) {
+  .navigation__item:nth-of-type(4) {
+    margin-right: 10rem;
+  }
+}
+
+@media screen and (max-width: 87.5em) {
+  .navigation__item:nth-of-type(4) {
+    margin-right: 10rem;
+  }
+}
+
+@media screen and (max-width: 68.75em) {
+  .navigation__item:nth-of-type(4) {
+    margin-right: 5rem;
+  }
+}
+
+@media screen and (max-width: 62.5em) {
+  .navigation__item:nth-of-type(4) {
+    margin-right: 0;
+  }
 }
 
 .navigation__link {
@@ -70,6 +140,15 @@ body {
   text-decoration: none;
   padding: 1rem 2rem;
   position: relative;
+}
+
+@media screen and (max-width: 62.5em) {
+  .navigation__link {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    padding: 1rem;
+  }
 }
 
 .navigation__link::after {
@@ -83,8 +162,30 @@ body {
   transition: width 0.3s;
 }
 
+@media screen and (max-width: 62.5em) {
+  .navigation__link::after {
+    display: none;
+  }
+}
+
 .navigation__link:hover::after {
   width: 100%;
+}
+
+.menu {
+  display: none;
+}
+
+@media screen and (max-width: 62.5em) {
+  .menu {
+    display: block;
+  }
+}
+
+.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  visibility: visible;
 }
 
 .btn {
