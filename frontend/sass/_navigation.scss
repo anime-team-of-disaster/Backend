@@ -1,7 +1,7 @@
 // Desktop FHD+
 .navigation {
   width: 100%;
-  height: 7vh;
+  height: 60px;
   background-color: $primaryBlack;
   position: fixed;
   top: 0;
@@ -14,9 +14,9 @@
     // position: absolute;
     // top: 0;
     // left: 50px;
-    margin: 4.3rem 0 0 2rem;
-    width: 90px;
-    height: 90px;
+    margin: 3rem 0 0 1.5rem;
+    width: 80px;
+    height: 80px;
   }
 
   &__nav {
@@ -32,6 +32,7 @@
       width: 30vw;
       right: 0;
       flex-direction: column;
+
       transform: translateX(30vw);
       visibility: hidden;
       // opacity: 0;
@@ -78,6 +79,7 @@
     }
     @media screen and (max-width: $bp-1000) {
       margin-right: 0;
+      margin-bottom: 15rem;
     }
   }
   &__link {
@@ -125,4 +127,78 @@
   transform: translateX(0);
   visibility: visible;
   // opacity: 100%;
+}
+.register__btn {
+  background-image: linear-gradient(#ff4757, #ff6b81);
+}
+.login__btn {
+  @media screen and (max-width: $bp-1000) {
+    margin-bottom: 10rem !important;
+    border: solid 1px $primaryRed !important;
+  }
+}
+.menu {
+  width: 40px;
+  height: 35px;
+  background-color: transparent;
+  margin-right: 2rem;
+  border: none;
+  outline: none;
+  position: relative;
+
+  &__span {
+    display: block;
+    width: 40px;
+    height: 5px;
+    // background-color: #000;
+    border-radius: 3px;
+    background-image: linear-gradient(to top right, $primaryRed, $redLight);
+    transition: all 0.3s;
+    // background-image: linear-gradient(
+    //   to bottom right,
+    //   $orange,
+    //   $primaryRed,
+    //   $blackLight
+    // );
+
+    &::before {
+      content: "";
+      display: block;
+      transform: translateY(-12px);
+      border-radius: 3px;
+      width: 40px;
+      height: 5px;
+      z-index: 10;
+      background-image: linear-gradient(to top right, $primaryRed, $redLight);
+      transition: all 0.3s;
+      // background-image: linear-gradient(
+      //   to bottom right,
+      //   $orange,
+      //   $primaryRed,
+      //   $blackLight
+      // );
+      // background-color: #000;
+      // margin-right: 2rem;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      transform: translateY(7px);
+      border-radius: 3px;
+      width: 40px;
+      height: 5px;
+      z-index: 10;
+      background-image: linear-gradient(to top right, $primaryRed, $redLight);
+      // background-image: linear-gradient(
+      //   to bottom right,
+      //   $orange,
+      //   $primaryRed,
+      //   $blackLight
+      // );
+      // background-color: $redLight;
+      // margin-right: 2rem;
+      transition: all 0.3s;
+    }
+  }
 }
