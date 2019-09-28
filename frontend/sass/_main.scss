@@ -12,6 +12,7 @@ $bp-1100: 68.75em; // 1100px
 $bp-1000: 62.5em; //1000px
 $bp-800: 50em; //800px
 $bp-600: 37.5em; // 600px
+$bp-400: 25em; //400px
 
 $primaryBlack: #2f3542;
 $blackLight: #57606f;
@@ -38,6 +39,8 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 95vh;
+  grid-template-rows: 80vh min-content;
+  grid-template-columns: 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
+  // justify-content: center;
   background-color: #2f3542;
 }
