@@ -1,0 +1,19 @@
+.active {
+  // transition: all 0.3s;
+  transform: translateX(0);
+  visibility: visible;
+  // opacity: 100%;
+}
+
+.active--span {
+  transition-delay: 0.1s;
+  transform: rotate(-45deg);
+  &::before {
+    transform: rotate(90deg);
+    transition-delay: 0.1s;
+  }
+  &::after {
+    // visibility: hidden;
+    opacity: 0;
+  }
+}

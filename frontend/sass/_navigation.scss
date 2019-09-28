@@ -9,14 +9,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
 
   &__logo {
     // position: absolute;
     // top: 0;
     // left: 50px;
-    margin: 3rem 0 0 1.5rem;
-    width: 80px;
-    height: 80px;
+    margin: 4.5rem 0 0 3rem;
+    width: 100px;
+    height: 100px;
+
+    @media screen and (max-width: $bp-1400) {
+      margin: 3rem 0 0 1.5rem;
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &__nav {
@@ -29,7 +36,7 @@
       height: 100vh;
       top: 100%;
       background-color: $primaryBlack;
-      width: 30vw;
+      width: 40vw;
       right: 0;
       flex-direction: column;
 
@@ -51,12 +58,24 @@
       flex-direction: column;
       width: 100%;
     }
+    @media (max-width: $bp-1000) and (orientation: landscape) {
+      // justify-content: center;
+      height: 50%;
+    }
   }
 
   &__item {
-    margin-right: 6rem;
-    @media screen and (max-width: $bp-1100) {
+    margin-right: 10rem;
+
+    @media screen and (max-width: $bp-1400) {
+      margin-right: 5rem;
+    }
+
+    @media screen and (max-width: $bp-1200) {
       margin-right: 2.5rem;
+    }
+    @media screen and (max-width: $bp-1100) {
+      margin-right: 2rem;
     }
     @media screen and (max-width: $bp-1000) {
       margin-right: 0;
@@ -64,13 +83,14 @@
 
       display: flex;
     }
+
+    @media (max-width: $bp-800) and (orientation: landscape) {
+      margin: 1rem;
+    }
   }
 
   &__item:nth-of-type(4) {
-    margin-right: 40rem;
-    @media screen and (max-width: $bp-1400) {
-      margin-right: 10rem;
-    }
+    margin-right: 20rem;
     @media screen and (max-width: $bp-1400) {
       margin-right: 10rem;
     }
@@ -80,6 +100,9 @@
     @media screen and (max-width: $bp-1000) {
       margin-right: 0;
       margin-bottom: 15rem;
+    }
+    @media (max-width: $bp-800) and (orientation: landscape) {
+      margin-bottom: 0;
     }
   }
   &__link {
@@ -96,6 +119,11 @@
       text-align: center;
       padding: 0;
       padding: 1rem;
+    }
+
+    @media (max-width: $bp-1000) and (orientation: landscape) {
+      margin-bottom: 0;
+      padding: 0.5rem 1rem;
     }
   }
 
@@ -122,19 +150,27 @@
     display: block;
   }
 }
-.active {
-  // transition: all 0.3s;
-  transform: translateX(0);
-  visibility: visible;
-  // opacity: 100%;
-}
+
 .register__btn {
-  background-image: linear-gradient(#ff4757, #ff6b81);
+  background-image: linear-gradient(to right bottom, #ff4757, #ff6b81);
+  @media (max-width: $bp-600) and (orientation: landscape) {
+    // justify-content: center;
+    margin-top: 2rem !important;
+    font-size: 1.5rem;
+  }
 }
 .login__btn {
+  padding: 0.8rem 3rem !important;
+  border: solid 1px $primaryRed !important;
   @media screen and (max-width: $bp-1000) {
     margin-bottom: 10rem !important;
     border: solid 1px $primaryRed !important;
+  }
+
+  @media (max-width: $bp-600) and (orientation: landscape) {
+    // justify-content: center;
+    // margin-top: 2rem !important;
+    font-size: 1.5rem;
   }
 }
 .menu {

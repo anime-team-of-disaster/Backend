@@ -1,0 +1,12 @@
+.header {
+  background-image: linear-gradient(
+      to right top,
+      rgba(87, 96, 111, 0.4),
+      rgba(255, 71, 87, 0.4)
+    ),
+    url(../img/header-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  //   clip-path: polygon(0% 100%, 100% 90%, 100% 0, 0 0);
+}
