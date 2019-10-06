@@ -40,7 +40,13 @@ body {
 .container {
   display: grid;
   grid-template-rows: 80vh min-content;
-  grid-template-columns: 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
+  grid-template-columns:
+    1fr [ad-start] minmax(min-content, 14rem) [ad-end] 1fr [col-start] repeat(
+      8,
+      minmax(min-content, 14rem)
+    )
+    [col-end]
+    1fr minmax(min-content, 14rem) 1fr;
   // justify-content: center;
   background-color: #2f3542;
 }

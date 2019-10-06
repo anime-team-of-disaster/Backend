@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap&subset=latin-ext"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
     <link rel="stylesheet" href="css/base.css" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Moje anime</title>
@@ -56,9 +57,32 @@
     </header>
 
     <main class="main">
-      mian incomeing
+      <h2 class="main__heading">Popularne anime</h2>
+      <!-- Swiper -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="swiper-slide__img" src="img/sao-card.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+          <div class="swiper-slide">Slide 10</div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <!-- ẹnd swiper -->
     </main>
-
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
