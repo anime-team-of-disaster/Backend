@@ -26,20 +26,23 @@ var swiper = new Swiper(".swiper-container", {
   breakpoints: {
     640: {
       slidesPerView: 2,
-      spaceBetween: 20
+      spaceBetween: 20,
+      grabCursor: true
     },
     768: {
       slidesPerView: 3,
-      spaceBetween: 40
+      spaceBetween: 40,
+      grabCursor: true
     },
     1024: {
       slidesPerView: 3,
-      spaceBetween: 50
+      spaceBetween: 50,
+      grabCursor: true
     },
     1400: {
       slidesPerView: 5,
       spaceBetween: 50
-      // grabCursor: true
+      //
     }
   }
 });
