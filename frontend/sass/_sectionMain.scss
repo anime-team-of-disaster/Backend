@@ -3,11 +3,14 @@
   //   position: relative;
 
   &__heading {
-    font-family: "Bangers", cursive;
+    // font-family: "Bangers", cursive;
+    font-family: "Kaushan Script", cursive;
+    font-weight: light;
     letter-spacing: 5px;
     font-size: 6rem;
     text-align: center;
     padding: 5rem 0;
+    grid-column: -1 / 1;
     // margin-bottom: 4rem;
     background: linear-gradient(to right bottom, #ff4757, #ff6b81);
     -webkit-background-clip: text;
@@ -38,22 +41,29 @@
     width: 80vw;
     height: 50vh;
     margin-bottom: 4rem;
-    padding: 2rem 6rem;
+    padding: 2rem 10rem;
     // border: 3px solid #222;
     border-radius: 5px;
   }
 
   &-slide {
     background-color: $blackLight;
-    box-shadow: -10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 8px 8px 0px 0px rgba(255, 71, 87, 0.75);
     border-radius: 3px;
     position: relative;
     //
 
     &__img {
-      width: 100%;
-      height: 100%;
+      width: 80%;
+      height: 80%;
       border-radius: 3px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -55%);
+      border: solid 5px #2f3542;
+      // display: flex;
+      // justify-content: center;
       // background-color: #000;
     }
 
@@ -82,8 +92,8 @@
       display: flex;
       justify-content: space-around;
       left: 0;
-      bottom: 20%;
       width: 100%;
+      bottom: 0;
       background-color: rgba(34, 34, 34, 0.85);
       padding: 1rem 0;
     }
@@ -108,6 +118,7 @@
     color: #ff4757;
   }
   &-pagination-bullet-active {
-    background: #ff4757;
+    // background: #ff4757;
+    background: white;
   }
 }

@@ -40,7 +40,7 @@ var swiper = new Swiper(".swiper-container", {
       grabCursor: true
     },
     1400: {
-      slidesPerView: 5,
+      slidesPerView: 4,
       spaceBetween: 50
       //
     }
