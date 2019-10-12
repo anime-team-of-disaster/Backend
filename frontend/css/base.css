@@ -28,9 +28,9 @@ body {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 80vh min-content;
-      grid-template-rows: 80vh -webkit-min-content;
-      grid-template-rows: 80vh min-content;
+  -ms-grid-rows: 80vh min-content minmax(min-content, 20vh);
+      grid-template-rows: 80vh -webkit-min-content minmax(-webkit-min-content, 20vh);
+      grid-template-rows: 80vh min-content minmax(min-content, 20vh);
   -ms-grid-columns: 1fr [ad-start] minmax(min-content, 14rem) [ad-end] 1fr [col-start] (minmax(min-content, 14rem))[8] [col-end] 1fr minmax(min-content, 14rem) 1fr;
       grid-template-columns: 1fr [ad-start] minmax(-webkit-min-content, 14rem) [ad-end] 1fr [col-start] repeat(8, minmax(-webkit-min-content, 14rem)) [col-end] 1fr minmax(-webkit-min-content, 14rem) 1fr;
       grid-template-columns: 1fr [ad-start] minmax(min-content, 14rem) [ad-end] 1fr [col-start] repeat(8, minmax(min-content, 14rem)) [col-end] 1fr minmax(min-content, 14rem) 1fr;
@@ -611,5 +611,11 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+.footer {
+  grid-column: col-start / col-end;
+  margin-top: 6rem;
+  background-color: #57606f;
 }
 /*# sourceMappingURL=base.css.map */
