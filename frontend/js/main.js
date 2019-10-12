@@ -24,9 +24,14 @@ var swiper = new Swiper(".swiper-container", {
     prevEl: ".swiper-button-prev"
   },
   breakpoints: {
+    300: {
+      slidesPerView: 1,
+      spaceBetween: 60,
+      grabCursor: true
+    },
     640: {
       slidesPerView: 2,
-      spaceBetween: 20,
+      spaceBetween: 40,
       grabCursor: true
     },
     768: {

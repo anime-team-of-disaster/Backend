@@ -24,6 +24,15 @@
       font-size: 5rem;
       text-align: center;
     }
+
+    @media screen and (max-width: $bp-800) and (orientation: landscape) {
+      font-size: 5rem;
+      text-align: center;
+    }
+    @media screen and (max-width: $bp-600) and (orientation: landscape) {
+      font-size: 4rem;
+      text-align: center;
+    }
   }
 
   &__container {
@@ -37,9 +46,13 @@
       left: 35%;
     }
 
-    @media screen and (max-width: $bp-1000) {
+    @media screen and (max-width: $bp-600) {
       left: 50%;
     }
+
+    // @media screen and (max-width: $bp-1000) {
+    //   left: 40%;
+    // }
     @media screen and (max-width: $bp-400) {
       // // display: flex;
       // flex-direction: column;
