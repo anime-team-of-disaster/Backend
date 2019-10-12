@@ -39,7 +39,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh min-content minmax(min-content, 20vh);
+  grid-template-rows: 80vh min-content min-content;
   grid-template-columns:
     1fr [ad-start] minmax(min-content, 14rem) [ad-end]
     1fr [col-start] repeat(8, minmax(min-content, 14rem))

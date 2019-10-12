@@ -12,7 +12,7 @@ btn.addEventListener("click", function() {
 
 var swiper = new Swiper(".swiper-container", {
   slidesPerView: 1,
-  spaceBetween: 10,
+  spaceBetween: 20,
   // init: false,
   pagination: {
     el: ".swiper-pagination"
@@ -31,7 +31,7 @@ var swiper = new Swiper(".swiper-container", {
     },
     640: {
       slidesPerView: 2,
-      spaceBetween: 40,
+      spaceBetween: 30,
       grabCursor: true
     },
     768: {

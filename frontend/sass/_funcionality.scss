@@ -4,7 +4,7 @@
   visibility: visible;
   // opacity: 100%;
 }
-
+//menu
 .active--span {
   transition-delay: 0.1s;
   transform: rotate(-45deg);
@@ -16,4 +16,9 @@
     // visibility: hidden;
     opacity: 0;
   }
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }

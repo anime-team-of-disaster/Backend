@@ -28,9 +28,9 @@ body {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 80vh min-content minmax(min-content, 20vh);
-      grid-template-rows: 80vh -webkit-min-content minmax(-webkit-min-content, 20vh);
-      grid-template-rows: 80vh min-content minmax(min-content, 20vh);
+  -ms-grid-rows: 80vh min-content min-content;
+      grid-template-rows: 80vh -webkit-min-content -webkit-min-content;
+      grid-template-rows: 80vh min-content min-content;
   -ms-grid-columns: 1fr [ad-start] minmax(min-content, 14rem) [ad-end] 1fr [col-start] (minmax(min-content, 14rem))[8] [col-end] 1fr minmax(min-content, 14rem) 1fr;
       grid-template-columns: 1fr [ad-start] minmax(-webkit-min-content, 14rem) [ad-end] 1fr [col-start] repeat(8, minmax(-webkit-min-content, 14rem)) [col-end] 1fr minmax(-webkit-min-content, 14rem) 1fr;
       grid-template-columns: 1fr [ad-start] minmax(min-content, 14rem) [ad-end] 1fr [col-start] repeat(8, minmax(min-content, 14rem)) [col-end] 1fr minmax(min-content, 14rem) 1fr;
@@ -588,6 +588,11 @@ body {
   opacity: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .advertisement {
   width: 100%;
   display: -webkit-box;
@@ -617,5 +622,72 @@ body {
   grid-column: col-start / col-end;
   margin-top: 6rem;
   background-color: #57606f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem 0;
+}
+
+.footer__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 37.5em) {
+  .footer__socials {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.footer__icon {
+  margin-right: 2rem;
+}
+
+.footer__icon:nth-child(3) {
+  margin-right: 4rem;
+}
+
+.footer__licence {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1rem 6rem;
+}
+
+.zone {
+  color: #ff4757;
+  background-color: #2f3542;
+  padding: 0.35rem;
+  margin: 0 0.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+svg {
+  width: 50px;
+  height: 50px;
+}
+
+.creators {
+  padding: 0 0.5rem;
+  margin: 0 0.5rem;
+  background-color: #2f3542;
+  color: #ff4757;
+  font-family: "Kaushan Script", cursive;
+  font-size: 1.75rem;
 }
 /*# sourceMappingURL=base.css.map */

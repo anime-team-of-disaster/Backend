@@ -5,11 +5,13 @@
       rgba(255, 71, 87, 0.4)
     ),
     url(../img/header-bg.jpg);
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
   grid-column: -1 /1;
+  // background-attachment: fixed;
   // display: grid;
   // grid-template-columns: 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
   // grid-template-rows: 80vh;
