@@ -7,3 +7,47 @@ btn.addEventListener("click", function() {
 
   span.classList.toggle("active--span");
 });
+
+//slider
+
+var swiper = new Swiper(".swiper-container", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  // init: false,
+  pagination: {
+    el: ".swiper-pagination"
+    // clickable: true
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  breakpoints: {
+    300: {
+      slidesPerView: 1,
+      spaceBetween: 60,
+      grabCursor: true
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      grabCursor: true
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+      grabCursor: true
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      grabCursor: true
+    },
+    1400: {
+      slidesPerView: 4,
+      spaceBetween: 50
+      //
+    }
+  }
+});

@@ -5,11 +5,13 @@
       rgba(255, 71, 87, 0.4)
     ),
     url(../img/header-bg.jpg);
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
   grid-column: -1 /1;
+  // background-attachment: fixed;
   // display: grid;
   // grid-template-columns: 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
   // grid-template-rows: 80vh;
@@ -22,6 +24,15 @@
 
     @media screen and (max-width: $bp-400) {
       font-size: 5rem;
+      text-align: center;
+    }
+
+    @media screen and (max-width: $bp-800) and (orientation: landscape) {
+      font-size: 5rem;
+      text-align: center;
+    }
+    @media screen and (max-width: $bp-600) and (orientation: landscape) {
+      font-size: 4rem;
       text-align: center;
     }
   }
@@ -37,9 +48,13 @@
       left: 35%;
     }
 
-    @media screen and (max-width: $bp-1000) {
+    @media screen and (max-width: $bp-600) {
       left: 50%;
     }
+
+    // @media screen and (max-width: $bp-1000) {
+    //   left: 40%;
+    // }
     @media screen and (max-width: $bp-400) {
       // // display: flex;
       // flex-direction: column;
@@ -62,6 +77,7 @@
     background-color: $blackLight;
     color: #fff;
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
 
     @media screen and (max-width: $bp-400) {
       font-size: 1.5rem;
