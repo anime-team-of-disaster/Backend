@@ -26,17 +26,17 @@ var swiper = new Swiper(".swiper-container", {
   breakpoints: {
     300: {
       slidesPerView: 1,
-      spaceBetween: 60,
+      spaceBetween: 20,
       grabCursor: true
     },
     640: {
       slidesPerView: 2,
-      spaceBetween: 30,
+      spaceBetween: 50,
       grabCursor: true
     },
     768: {
       slidesPerView: 3,
-      spaceBetween: 40,
+      spaceBetween: 50,
       grabCursor: true
     },
     1024: {
