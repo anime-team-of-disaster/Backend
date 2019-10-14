@@ -1,136 +1,139 @@
 .main {
   grid-column: col-start / col-end;
-  //   position: relative;
+
+  // display: grid;
+  display: flex;
+  // justify-content
+  flex-direction: column;
+
+  // grid-template-columns:
+  //   [main-start] repeat(8, minmax(auto-fit, 14rem))
+  //   [main-end] 1fr;
+
+  // grid-template-rows: repeat(2, min-content);
 
   &__heading {
-    // font-family: "Bangers", cursive;
-    font-family: "Kaushan Script", cursive;
+    // font-family: "Kaushan Script", cursive;
+    font-family: "Poiret One", cursive;
     font-weight: light;
-    letter-spacing: 5px;
+    letter-spacing: 10px;
     font-size: 6.5rem;
     text-align: center;
+    justify-content: center;
     padding: 5rem 0;
-    grid-column: -1 / 1;
-    // margin-bottom: 4rem;
-    background: linear-gradient(to right bottom, #ff4757, #ff6b81);
+    grid-column: main-start / main-end;
+    background: linear-gradient(to right bottom, $bluw, $blu);
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(3px 3px #222);
     position: relative;
-
-    // &::after {
-    //   content: "";
-    //   border-radius: 50px;
-    //   position: absolute;
-    //   // top: 50%;
-    //   bottom: 20%;
-    //   left: 0;
-    //   border-bottom: solid 5px #000;
-    //   width: 100%;
-    //   // filter: none;
-    //   box-shadow: none;
-    //   // z-index: 1000;
-    //   // filter: drop-shadow(-3px 0px #fff);
-    // }
   }
 }
+// .kurwa {
+//   grid-column: col-start2 / col-end2;
+// }
 .swiper {
   &-container {
-    // background-color: #fff;
-    background: transparent;
     // width: 100%;
-    margin-bottom: 4rem;
-    padding: 2rem 10rem;
-    // border: 3px solid #222;
-    border-radius: 5px;
-    width: 90vw;
-    // height: 50vh;
-
-    @media screen and (max-width: $bp-1000) {
-      width: 100vw;
+    width: 1200px;
+    height: 400px;
+    @media screen and (max-width: $bp-1200) {
+      width: 1000px;
     }
-  }
-  &-wrapper {
-    // height: 500px;
-  }
-
-  &-slide {
-    background-color: $blackLight;
-    box-shadow: 8px 8px 0px 0px rgba(255, 71, 87, 0.75);
-    border-radius: 3px;
-    position: relative;
-    width: 300px !important;
-    height: 450px;
 
     @media screen and (max-width: $bp-1000) {
-      width: 250px !important;
+      width: 800px;
+      height: 350px;
+    }
+    @media screen and (max-width: $bp-800) {
+      width: 600px;
       height: 400px;
     }
-    //
+    @media screen and (max-width: $bp-600) {
+      width: 280px;
+      height: 400px;
+    }
+  }
+  &-slide {
+    position: relative;
+    height: 390px;
+    @media screen and (max-width: $bp-1000) {
+      height: 340px;
+    }
+    @media screen and (max-width: $bp-800) {
+      height: 390px;
+    }
+    @media screen and (max-width: $bp-600) {
+      height: 390px;
+    }
 
-    &__img {
-      width: 80%;
-      height: 80%;
-      border-radius: 3px;
+    &__box {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      // background-color: rgba(34, 34, 34, 0.85);
+      background-color: $dark;
+
+      border-radius: 5px;
+      // border: 4px solid $primaryRed;
+      // z-index: 100;
+      box-shadow: 5px 5px 0px $bluw;
+
+      @media screen and (max-width: $bp-600) {
+        box-shadow: 0px 5px 0px $red;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 75%;
+    height: 70%;
+    border-radius: 5px;
+
+    // position: relative;
+
+    &--shadow {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -55%);
-      border: solid 5px #2f3542;
-      // display: flex;
-      // justify-content: center;
-      // background-color: #000;
-    }
-
-    &__shadow {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      // display: flex;
-      // background-color: $blackLight;
+      width: 75%;
+      height: 70%;
+      transform: translate(-50%, -60%);
+      background-color: rgba(247, 56, 88, 0.2);
       border-radius: 3px;
-      background-image: linear-gradient(
-        to right top,
-        rgba(87, 96, 111, 0.6),
-        rgba(47, 53, 66, 0.5)
-      );
-
-      width: 100%;
-      height: 100%;
-      // align-items: flex-end;
-      // justify-content: center;
-      //   box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
-      //   left: 0;
-    }
-    &__box {
-      position: absolute;
-      display: flex;
-      justify-content: space-around;
-      left: 0;
-      width: 100%;
-      bottom: 0;
-      background-color: rgba(34, 34, 34, 0.85);
-      padding: 1rem 0;
+      // border: 8px solid $primaryBlack;
     }
 
     &__btn {
-      background-image: linear-gradient(to right bottom, #ff4757, #ff6b81);
-      font-size: 2rem;
-      padding: 0.5rem 2rem;
-      // margin: 1rem 0;
-    }
-    &__btn--grey {
-      background-color: #2f3542;
-      border: solid 2px $primaryRed;
-      // margin-top: 1rem;
+      position: absolute;
+      // top: 100%;
+      bottom: -25%;
+      width: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      background-image: linear-gradient(to right bottom, $bluw);
+
+      // transform: translate(0%, 0%);
     }
   }
 
   &-button-next {
-    color: #ff4757;
+    color: $bluw;
+    // width: 100px;
+    font-weight: bold;
   }
   &-button-prev {
-    color: #ff4757;
+    color: $bluw;
+    font-weight: bold;
+    // text-shadow: 10px 6px 20px rgba(0, 0, 0, 1);
   }
   &-pagination-bullet-active {
     // background: #ff4757;
