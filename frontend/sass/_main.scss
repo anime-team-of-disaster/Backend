@@ -14,12 +14,18 @@ $bp-800: 50em; //800px
 $bp-600: 37.5em; // 600px
 $bp-400: 25em; //400px
 
-$primaryBlack: #2f3542;
-$blackLight: #57606f;
-$primaryRed: #ff4757;
+// $primaryBlack: #2f3542;
+$dark: #2f3542;
+$black: #454553;
+// $blackLight: #57606f;
+$blu: #d8e9f0;
+$bluw: #4aa0d5;
+// $primaryRed: #ff4757;
+$red: #f73859;
+
 $redLight: #ff6b81;
-$orange: #ff6348;
-$orangeLight: #ff7f50;
+$btRed: #fb2b3c;
+$btnRedLight: #fd3546;
 
 html {
   font-size: 62.5%; // 10px
@@ -39,13 +45,14 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh min-content min-content;
+  grid-template-rows: [header] 80vh [end-header] min-content min-content;
   grid-template-columns:
-    1fr [ad-start] minmax(min-content, 14rem) [ad-end]
     1fr [col-start] repeat(8, minmax(min-content, 14rem))
-    [col-end]
-    1fr minmax(min-content, 14rem) 1fr;
+    [col-end] 1fr;
+  // height: 100vh;
+  // width: 100vw;
+
   // justify-content: center;
-  background-color: #2f3542;
+  background-color: $black;
   // background-image: linear-gradient(to right bottom, #2f3542, #57606f) ;
 }

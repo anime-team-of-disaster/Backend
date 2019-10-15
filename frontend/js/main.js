@@ -29,22 +29,22 @@ var swiper = new Swiper(".swiper-container", {
       spaceBetween: 20,
       grabCursor: true
     },
-    640: {
+    600: {
       slidesPerView: 2,
       spaceBetween: 50,
       grabCursor: true
     },
-    768: {
+    800: {
       slidesPerView: 3,
       spaceBetween: 50,
       grabCursor: true
     },
-    1024: {
+    1000: {
       slidesPerView: 3,
       spaceBetween: 50,
       grabCursor: true
     },
-    1400: {
+    1200: {
       slidesPerView: 4,
       spaceBetween: 50
       //
