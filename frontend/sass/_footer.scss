@@ -9,20 +9,21 @@
 
   &__socials {
     display: flex;
+    // flex-direction: column;
     justify-content: center;
     font-size: 1.5rem;
     align-items: center;
 
     @media (max-width: $bp-600) {
-      // flex-direction: column;
-      // justify-content: space-evenly;
-      align-items: space-aruond;
-      // margin: 0;
+      flex-direction: column;
     }
   }
 
   &__icon {
     margin-right: 2rem;
+    @media (max-width: $bp-600) {
+      padding: 1rem;
+    }
     // fill: $blu;
     // color: $blu;
 
@@ -41,6 +42,10 @@
     text-align: center;
     font-size: 1.2rem;
     padding: 0rem 5rem 0.5rem 5rem;
+
+    @media (max-width: $bp-600) {
+      padding: 1rem 5rem 2rem 5rem;
+    }
   }
 }
 
@@ -51,6 +56,7 @@
   margin: 0 0.5rem;
   // text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
   font-size: 1.3rem;
+
   font-weight: bold;
   // font-family: "Kaushan Script", cursive;
 }
@@ -67,4 +73,10 @@ svg {
   color: $black;
   font-family: "Kaushan Script", cursive;
   font-size: 1.75rem;
+}
+
+.authors {
+  @media (max-width: $bp-600) {
+    padding: 1rem 5rem 2rem 5rem;
+  }
 }

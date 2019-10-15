@@ -687,14 +687,21 @@ a {
 
 @media (max-width: 37.5em) {
   .footer__socials {
-    -webkit-box-align: space-aruond;
-        -ms-flex-align: space-aruond;
-            align-items: space-aruond;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
 .footer__icon {
   margin-right: 2rem;
+}
+
+@media (max-width: 37.5em) {
+  .footer__icon {
+    padding: 1rem;
+  }
 }
 
 .footer__icon:nth-child(3) {
@@ -711,6 +718,12 @@ a {
   text-align: center;
   font-size: 1.2rem;
   padding: 0rem 5rem 0.5rem 5rem;
+}
+
+@media (max-width: 37.5em) {
+  .footer__licence {
+    padding: 1rem 5rem 2rem 5rem;
+  }
 }
 
 .zone {
@@ -734,5 +747,11 @@ svg {
   color: #454553;
   font-family: "Kaushan Script", cursive;
   font-size: 1.75rem;
+}
+
+@media (max-width: 37.5em) {
+  .authors {
+    padding: 1rem 5rem 2rem 5rem;
+  }
 }
 /*# sourceMappingURL=base.css.map */
