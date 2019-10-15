@@ -13,6 +13,7 @@
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
 
   &__logo {
+    display: none;
     // position: absolute;
     // top: 0;
     // left: 50px;
@@ -61,7 +62,7 @@
     }
     @media (max-width: $bp-1000) and (orientation: landscape) {
       // justify-content: center;
-      height: 50%;
+      height: 80%;
     }
   }
 
@@ -91,9 +92,9 @@
   }
 
   &__item:nth-of-type(4) {
-    margin-right: 20rem;
+    margin-right: 5rem;
     @media screen and (max-width: $bp-1400) {
-      margin-right: 10rem;
+      margin-right: 5rem;
     }
     @media screen and (max-width: $bp-1100) {
       margin-right: 5rem;
@@ -102,12 +103,18 @@
       margin-right: 0;
       margin-bottom: 15rem;
     }
+    @media screen and (max-width: $bp-1000) and (orientation: landscape) {
+      margin-right: 0;
+    }
     @media (max-width: $bp-800) and (orientation: landscape) {
       margin-bottom: 0;
     }
   }
+  // .last {
+  //   padding-bottom: 100rem !important;
+  // }
   &__link {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     color: #fff;
     text-decoration: none;
     // width: 100%;
@@ -120,6 +127,13 @@
       text-align: center;
       padding: 0;
       padding: 1rem;
+      font-size: 3rem;
+    }
+    @media screen and (max-width: $bp-1000) and (orientation: landscape) {
+      font-size: 1.6rem;
+    }
+    @media screen and (max-width: $bp-600) {
+      font-size: 2rem;
     }
 
     @media (max-width: $bp-1000) and (orientation: landscape) {
@@ -130,7 +144,7 @@
 
   &__link::after {
     content: "";
-    border-bottom: 2px solid $red;
+    border-bottom: 2px solid $bluw;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -152,28 +166,28 @@
   }
 }
 
-.register__btn {
-  background-image: linear-gradient(to right bottom, #ff4757, #ff6b81);
-  @media (max-width: $bp-600) and (orientation: landscape) {
-    // justify-content: center;
-    margin-top: 2rem !important;
-    font-size: 1.5rem;
-  }
-}
-.login__btn {
-  padding: 0.8rem 3rem !important;
-  border: solid 1px $red !important;
-  @media screen and (max-width: $bp-1000) {
-    margin-bottom: 10rem !important;
-    border: solid 1px $red !important;
-  }
+// .register__btn {
+//   background-image: linear-gradient(to right bottom, #ff4757, #ff6b81);
+//   @media (max-width: $bp-600) and (orientation: landscape) {
+//     // justify-content: center;
+//     margin-top: 2rem !important;
+//     font-size: 1.5rem;
+//   }
+// }
+// .login__btn {
+//   padding: 0.8rem 3rem !important;
+//   border: solid 1px $red !important;
+//   @media screen and (max-width: $bp-1000) {
+//     margin-bottom: 10rem !important;
+//     border: solid 1px $red !important;
+//   }
 
-  @media (max-width: $bp-600) and (orientation: landscape) {
-    // justify-content: center;
-    // margin-top: 2rem !important;
-    font-size: 1.5rem;
-  }
-}
+//   @media (max-width: $bp-600) and (orientation: landscape) {
+//     // justify-content: center;
+//     // margin-top: 2rem !important;
+//     font-size: 1.5rem;
+//   }
+// }
 .menu {
   width: 40px;
   height: 35px;
@@ -189,7 +203,7 @@
     height: 5px;
     // background-color: #000;
     border-radius: 3px;
-    background-image: linear-gradient(to top right, $red, $redLight);
+    background-image: linear-gradient(to top right, $bluw);
     transition: all 0.3s;
     // background-image: linear-gradient(
     //   to bottom right,
@@ -206,7 +220,7 @@
       width: 40px;
       height: 5px;
       z-index: 10;
-      background-image: linear-gradient(to top right, $red, $redLight);
+      background-image: linear-gradient(to top right, $bluw);
       transition: all 0.3s;
       // background-image: linear-gradient(
       //   to bottom right,
@@ -226,7 +240,7 @@
       width: 40px;
       height: 5px;
       z-index: 10;
-      background-image: linear-gradient(to top right, $red, $redLight);
+      background-image: linear-gradient(to top right, $bluw);
       // background-image: linear-gradient(
       //   to bottom right,
       //   $orange,

@@ -59,6 +59,7 @@ body {
 }
 
 .navigation__logo {
+  display: none;
   margin: 4.5rem 0 0 3rem;
   width: 100px;
   height: 100px;
@@ -123,7 +124,7 @@ body {
 
 @media (max-width: 62.5em) and (orientation: landscape) {
   .navigation__list {
-    height: 50%;
+    height: 80%;
   }
 }
 
@@ -166,12 +167,12 @@ body {
 }
 
 .navigation__item:nth-of-type(4) {
-  margin-right: 20rem;
+  margin-right: 5rem;
 }
 
 @media screen and (max-width: 87.5em) {
   .navigation__item:nth-of-type(4) {
-    margin-right: 10rem;
+    margin-right: 5rem;
   }
 }
 
@@ -188,6 +189,12 @@ body {
   }
 }
 
+@media screen and (max-width: 62.5em) and (orientation: landscape) {
+  .navigation__item:nth-of-type(4) {
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 50em) and (orientation: landscape) {
   .navigation__item:nth-of-type(4) {
     margin-bottom: 0;
@@ -195,7 +202,7 @@ body {
 }
 
 .navigation__link {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   color: #fff;
   text-decoration: none;
   padding: 1rem 2rem;
@@ -208,6 +215,19 @@ body {
     text-align: center;
     padding: 0;
     padding: 1rem;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 62.5em) and (orientation: landscape) {
+  .navigation__link {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
+  .navigation__link {
+    font-size: 2rem;
   }
 }
 
@@ -220,7 +240,7 @@ body {
 
 .navigation__link::after {
   content: "";
-  border-bottom: 2px solid #f73859;
+  border-bottom: 2px solid #4aa0d5;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -249,36 +269,6 @@ body {
   }
 }
 
-.register__btn {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff4757), to(#ff6b81));
-  background-image: linear-gradient(to right bottom, #ff4757, #ff6b81);
-}
-
-@media (max-width: 37.5em) and (orientation: landscape) {
-  .register__btn {
-    margin-top: 2rem !important;
-    font-size: 1.5rem;
-  }
-}
-
-.login__btn {
-  padding: 0.8rem 3rem !important;
-  border: solid 1px #f73859 !important;
-}
-
-@media screen and (max-width: 62.5em) {
-  .login__btn {
-    margin-bottom: 10rem !important;
-    border: solid 1px #f73859 !important;
-  }
-}
-
-@media (max-width: 37.5em) and (orientation: landscape) {
-  .login__btn {
-    font-size: 1.5rem;
-  }
-}
-
 .menu {
   width: 40px;
   height: 35px;
@@ -294,8 +284,8 @@ body {
   width: 40px;
   height: 5px;
   border-radius: 3px;
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#f73859), to(#ff6b81));
-  background-image: linear-gradient(to top right, #f73859, #ff6b81);
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#4aa0d5));
+  background-image: linear-gradient(to top right, #4aa0d5);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -309,8 +299,8 @@ body {
   width: 40px;
   height: 5px;
   z-index: 10;
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#f73859), to(#ff6b81));
-  background-image: linear-gradient(to top right, #f73859, #ff6b81);
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#4aa0d5));
+  background-image: linear-gradient(to top right, #4aa0d5);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -324,15 +314,15 @@ body {
   width: 40px;
   height: 5px;
   z-index: 10;
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#f73859), to(#ff6b81));
-  background-image: linear-gradient(to top right, #f73859, #ff6b81);
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#4aa0d5));
+  background-image: linear-gradient(to top right, #4aa0d5);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 .header {
-  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(87, 96, 111, 0.4)), to(rgba(255, 71, 87, 0.4))), url(../img/header-bg.jpg);
-  background-image: linear-gradient(to right top, rgba(87, 96, 111, 0.4), rgba(255, 71, 87, 0.4)), url(../img/header-bg.jpg);
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(87, 96, 111, 0.4)), to(rgba(74, 160, 213, 0.4))), url(../img/header-bg.jpg);
+  background-image: linear-gradient(to right top, rgba(87, 96, 111, 0.4), rgba(74, 160, 213, 0.4)), url(../img/header-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -429,8 +419,8 @@ body {
 .form__btn {
   font-size: 2rem;
   text-transform: capitalize;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#fb2b3c), to(#fd3546));
-  background-image: linear-gradient(to right bottom, #fb2b3c, #fd3546);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#4aa0d5));
+  background-image: linear-gradient(to right bottom, #4aa0d5);
 }
 
 .btn {
@@ -550,13 +540,6 @@ body {
           box-shadow: 5px 5px 0px #4aa0d5;
 }
 
-@media screen and (max-width: 37.5em) {
-  .swiper-slide__box {
-    -webkit-box-shadow: 0px 5px 0px #f73859;
-            box-shadow: 0px 5px 0px #f73859;
-  }
-}
-
 .swiper__img {
   position: absolute;
   top: 50%;
@@ -576,7 +559,7 @@ body {
   height: 70%;
   -webkit-transform: translate(-50%, -60%);
           transform: translate(-50%, -60%);
-  background-color: rgba(247, 56, 88, 0.2);
+  background-color: rgba(74, 160, 213, 0.1);
   border-radius: 3px;
 }
 
@@ -678,6 +661,7 @@ a {
   grid-column: -1 / 1;
   margin-top: 6rem;
   background-color: #2f3542;
+  color: #d8e9f0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -746,7 +730,7 @@ svg {
 .creators {
   padding: 0 0.5rem;
   margin: 0 0.5rem;
-  background-color: #4aa0d5;
+  background-color: #d8e9f0;
   color: #454553;
   font-family: "Kaushan Script", cursive;
   font-size: 1.75rem;

@@ -2,7 +2,7 @@
   background-image: linear-gradient(
       to right top,
       rgba(87, 96, 111, 0.4),
-      rgba(255, 71, 87, 0.4)
+      rgba(74, 160, 213, 0.4)
     ),
     url(../img/header-bg.jpg);
 
@@ -94,6 +94,6 @@
   &__btn {
     font-size: 2rem;
     text-transform: capitalize;
-    background-image: linear-gradient(to right bottom, #fb2b3c, #fd3546);
+    background-image: linear-gradient(to right bottom, $bluw);
   }
 }
