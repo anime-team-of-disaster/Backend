@@ -24,6 +24,13 @@ window.onscroll = function() {
 
   this.prevScrollpos = currnetScrollpos;
 };
+
+//smoothscroll
+
+const scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 800
+});
+
 //slider
 
 var swiper = new Swiper(".swiper-container", {
