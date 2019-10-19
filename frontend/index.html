@@ -9,11 +9,7 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap&subset=latin-ext"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap&subset=latin-ext"
+      href="https://fonts.googleapis.com/css?family=Sedgwick+Ave&display=swap&subset=latin-ext"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
@@ -33,13 +29,13 @@
             <a href="" class="navigation__link">Popularne anime</a>
           </li>
           <li class="navigation__item">
-            <a href="" class="navigation__link">Nowości</a>
+            <a href="" class="navigation__link">Newsy</a>
           </li>
           <li class="navigation__item">
             <a href="" class="navigation__link">Kategorie</a>
           </li>
           <li class="navigation__item last">
-            <a href="" class="navigation__link">Mój profil</a>
+            <a href="" class="navigation__link">Nowości</a>
           </li>
         </ul>
         <!-- <button class="register__btn btn">
@@ -53,7 +49,7 @@
         <span class="menu__span"></span>
       </button>
     </div>
-
+    <!-- header -->
     <header class="header">
       <div class="header__container">
         <h1 class="header__heading">Znajdz swoje anime</h1>
@@ -63,9 +59,11 @@
         </form>
       </div>
     </header>
+    <!-- end header -->
 
+    <!-- main  -->
     <main class="main">
-      <section>
+      <section id="popular" class="u--margin-bottom-10">
         <h2 class="main__heading">Popularne anime</h2>
         <!-- Slider main container -->
         <div class="swiper-container">
@@ -129,7 +127,44 @@
           <div class="swiper-button-next"></div>
         </div>
       </section>
-      <section>
+
+      <!-- news -->
+
+      <section class="news u--margin-bottom-10" id="news">
+        <h2 class="main__heading">Newsy</h2>
+        <div class="articles">
+          <article class="article">
+            <img class="article__img" src="img/saoNews.jpg" alt="" />
+            <div class="article__info">
+              <h2 class="article__heading">Hurr durr nowe anime!</h2>
+              <p class="article__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                et cumque nam omnis. Assumenda tenetur architecto nihil, amet
+                natus error.
+              </p>
+              <div class="article__link--box">
+                <a href="" class="article__link ">Czytaj więcej</a>
+              </div>
+            </div>
+          </article>
+          <article class="article">
+            <img class="article__img" src="img/saoNews.jpg" alt="" />
+            <div class="article__info">
+              <h2 class="article__heading">Hurr durr nowe anime!</h2>
+              <p class="article__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                et cumque nam omnis. Assumenda tenetur architecto nihil, amet
+                natus error.
+              </p>
+              <div class="article__link--box">
+                <a href="" class="article__link ">Czytaj więcej</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="new" class="u--margin-bottom-10">
         <h2 class="main__heading">Nowości Anime</h2>
         <!-- Slider main container -->
         <div class="swiper-container">
@@ -246,7 +281,7 @@
               viewBox="0 0 448 512"
             >
               <path
-                fill="#d8e9f0"
+                fill="#fff"
                 d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 
               48h137.25V327.69h-63V256h63v-54.64c0-62.15 
               37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 
@@ -269,7 +304,7 @@
               viewBox="0 0 448 512"
             >
               <path
-                fill="#d8e9f0"
+                fill="#fff"
                 d="M400 32H48C21.5 32 0 53.5 0 80v352c0 
           26.5 21.5 48 48 48h352c26.5 0 48-21.5 
           48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 

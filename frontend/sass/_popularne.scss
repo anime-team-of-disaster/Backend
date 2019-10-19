@@ -1,35 +1,3 @@
-.main {
-  grid-column: col-start / col-end;
-
-  // display: grid;
-  display: flex;
-  // justify-content
-  flex-direction: column;
-
-  // grid-template-columns:
-  //   [main-start] repeat(8, minmax(auto-fit, 14rem))
-  //   [main-end] 1fr;
-
-  // grid-template-rows: repeat(2, min-content);
-
-  &__heading {
-    // font-family: "Kaushan Script", cursive;
-    font-family: "Poiret One", cursive;
-    font-weight: light;
-    letter-spacing: 10px;
-    font-size: 6.5rem;
-    text-align: center;
-    justify-content: center;
-    padding: 5rem 0;
-    grid-column: main-start / main-end;
-    background: linear-gradient(to right bottom, $bluw, $blu);
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(3px 3px #222);
-    position: relative;
-  }
-}
 // .kurwa {
 //   grid-column: col-start2 / col-end2;
 // }
@@ -119,19 +87,19 @@
       left: 50%;
       transform: translate(-50%, -50%);
       margin: 0;
-      background-image: linear-gradient(to right bottom, $bluw);
+      background-image: linear-gradient(to right bottom, #db6338);
 
       // transform: translate(0%, 0%);
     }
   }
 
   &-button-next {
-    color: $bluw;
+    color: #db6338;
     // width: 100px;
     font-weight: bold;
   }
   &-button-prev {
-    color: $bluw;
+    color: #db6338;
     font-weight: bold;
     // text-shadow: 10px 6px 20px rgba(0, 0, 0, 1);
   }

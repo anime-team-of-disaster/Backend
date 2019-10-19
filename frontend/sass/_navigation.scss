@@ -13,18 +13,24 @@
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
 
   &__logo {
-    display: none;
+    // display: none;
     // position: absolute;
     // top: 0;
     // left: 50px;
-    margin: 4.5rem 0 0 3rem;
-    width: 100px;
-    height: 100px;
+    margin: 8rem 0 0 -2rem;
+    width: 240px;
+    height: 140px;
 
-    @media screen and (max-width: $bp-1400) {
-      margin: 3rem 0 0 1.5rem;
-      width: 80px;
-      height: 80px;
+    // @media screen and (max-width: $bp-1400) {
+    //   margin: 1rem 0 0 0rem;
+    //   width: 100px;
+    //   height: 60px;
+    // }
+
+    @media screen and (max-width: $bp-1000) {
+      margin: 5rem 0 0 -3rem;
+      width: 175px;
+      height: 100px;
     }
   }
 
