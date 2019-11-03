@@ -1,6 +1,42 @@
+//search ajax
+
+
+function runTest() {
+  var result = document.getElementById('result');
+
+  result.classList.toggle('active-form');
+  $(document).ready(function () {
+    load_data();
+
+    function load_data(query) {
+      $.ajax({
+        url: "fetch.php",
+        method: "post",
+        data: {
+          query: query
+        },
+        success: function (data) {
+          $('#result').html(data);
+        }
+      });
+    }
+
+    $('#search_text').keyup(function () {
+      var search = $(this).val();
+      if (search != '') {
+        load_data(search);
+      } else {
+        load_data();
+      }
+    });
+  });
+
+};
+
+
 // menu
 var btn = document.querySelector(".menu");
-btn.addEventListener("click", function() {
+btn.addEventListener("click", function () {
   var navigation = document.querySelector(".navigation__nav");
   navigation.classList.toggle("active");
 
@@ -12,7 +48,7 @@ btn.addEventListener("click", function() {
 // nav hiding on scroll
 
 var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
+window.onscroll = function () {
   var currnetScrollpos = window.pageYOffset;
 
   if (this.prevScrollpos > currnetScrollpos) {

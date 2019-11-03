@@ -1,9 +1,7 @@
 .header {
-  background-image: linear-gradient(
-      to right top,
+  background-image: linear-gradient(to right top,
       rgba(157, 51, 39, 0.6),
-      rgba(235, 197, 120, 0.4)
-    ),
+      rgba(235, 197, 120, 0.4)),
     url(../img/header-bg.jpg);
 
   background-size: cover;
@@ -32,6 +30,7 @@
       font-size: 5rem;
       text-align: center;
     }
+
     @media screen and (max-width: $bp-600) and (orientation: landscape) {
       font-size: 4rem;
       text-align: center;
@@ -68,6 +67,7 @@
 .form {
   display: flex;
   align-items: center;
+  position: relative;
 
   &__input {
     font-size: 1.8rem;
@@ -96,4 +96,21 @@
     text-transform: capitalize;
     background-image: linear-gradient(to right bottom, #db6338);
   }
+}
+
+.results {
+  display: none;
+  position: absolute;
+  width: 800px;
+  height: 300px;
+  // top: 10%;
+  // bottom: -0;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.active-form {
+  display: block !important;
 }

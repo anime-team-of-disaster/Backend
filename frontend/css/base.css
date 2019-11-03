@@ -428,6 +428,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .form__input {
@@ -462,6 +463,21 @@ body {
   text-transform: capitalize;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#db6338));
   background-image: linear-gradient(to right bottom, #db6338);
+}
+
+.results {
+  display: none;
+  position: absolute;
+  width: 800px;
+  height: 300px;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.active-form {
+  display: block !important;
 }
 
 .btn {
