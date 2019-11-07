@@ -20,11 +20,11 @@
   include 'navigation.php';
   ?>
   <!-- header -->
-  <header class="header">
+  <header class="header" id="header">
     <div class="header__container">
       <h1 class="header__heading">Znajdz swoje anime</h1>
       <form action="" class="form">
-        <input type="text" placeholder="Wyszukaj animu" class="form__input" name="search_text" id="search_text"  autocomplete="off" <!--onclick="runTest()"--> 
+        <input type="text" placeholder="Wyszukaj animu" class="form__input" name="search_text" id="search_text"  autocomplete="off" >
     
        <!--    //TODO POWIADOMIENIE ajax dziła na clicku   -->
     

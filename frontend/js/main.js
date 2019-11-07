@@ -1,10 +1,43 @@
 //search ajax
 
+// var inputText = document.getElementById('search_text');
+// inputText.addEventListener('click', function () {
+
+//   var inputResult = document.getElementById('result');
+
+//   inputResult.classList.toggle('active-form');
+
+
+// });
+
+var inputText = document.getElementById('search_text');
+inputText.addEventListener('click', function (event) {
+  event.stopPropagation();
+  var inputResult = document.getElementById('result');
+  inputResult.classList.toggle('active-form');
+
+});
+document.body.addEventListener("click", function () {
+  var inputResult = document.getElementById('result');
+  inputResult.classList.remove('active-form');
+
+});
+
+// var inputText = document.getElementById('search_text');
+// var inputResult = document.getElementById('result');
+
+// inputText.addEventListener('focus', function () {
+//   inputResult.classList.add('active-form');
+// });
+
+// inputText.addEventListener('focusout', () => {
+//   inputResult.classList.remove('active-form');
+// });
+
+
 
 function runTest() {
-  var result = document.getElementById('result');
 
-  result.classList.toggle('active-form');
   $(document).ready(function () {
     load_data();
 
@@ -32,6 +65,8 @@ function runTest() {
   });
 
 };
+
+runTest();
 
 
 // menu
