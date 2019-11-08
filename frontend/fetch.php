@@ -37,13 +37,10 @@ if(mysqli_num_rows($result) > 0)
 	while($row = mysqli_fetch_array($result))
 	{
 		$output .= '
-			<tr id="res-tab">
-				<td><a href="category.php">'.$row["TITLE"].'</a></td>
-				<td>'.$row["CREATOR"].'</td>
-				<td>'.$row["TYPE"].'</td>
-				<td>'.$row["RATING"].'</td>
-				<td>'.$row["EPISODES"].'</td>
-			</tr>
+			
+				<div class="results__item"><a href="category.php" class="results__item--link"><div class="results__item--img"></div>'.$row["TITLE"].'</a></div>
+				
+			
 		';
 	}
 	echo $output;

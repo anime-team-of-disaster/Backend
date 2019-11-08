@@ -468,16 +468,35 @@ body {
 .results {
   display: none;
   position: absolute;
-  width: 800px;
-  height: 300px;
   top: 100%;
   left: 0;
   z-index: 1000;
   background-color: #fff;
 }
 
+.results__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.results__item--link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.6rem;
+}
+
 .active-form {
-  display: block !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
 }
 
 .btn {

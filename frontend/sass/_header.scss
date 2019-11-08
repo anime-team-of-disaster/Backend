@@ -101,16 +101,31 @@
 .results {
   display: none;
   position: absolute;
-  width: 800px;
-  height: 300px;
+  // width: 800px;
+  // height: 300px;
   // top: 10%;
   // bottom: -0;
+  // display: flex;
+  // flex-direction: col;
   top: 100%;
   left: 0;
   z-index: 1000;
   background-color: #fff;
+
+  &__item {
+    display: flex;
+    width: 100%;
+
+
+    &--link {
+      display: flex;
+      font-size: 1.6rem;
+    }
+  }
 }
 
 .active-form {
-  display: block !important;
+  display: flex !important;
+  flex-direction: column;
+  padding: 1rem;
 }
