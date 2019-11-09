@@ -37,6 +37,10 @@ body {
   background-color: #454553;
 }
 
+.container--anime {
+  margin-top: 6rem;
+}
+
 .main {
   grid-column: col-start / col-end;
   display: -webkit-box;
@@ -847,6 +851,52 @@ a {
 
 .u--margin-bottom-10 {
   margin-bottom: 10rem;
+}
+
+.header--anime {
+  width: 100%;
+  height: 30vh;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(157, 51, 39, 0.6)), to(rgba(235, 197, 120, 0.4))), url("../naruto/naruto-bg2.jpg");
+  background-image: linear-gradient(to right top, rgba(157, 51, 39, 0.6), rgba(235, 197, 120, 0.4)), url("../naruto/naruto-bg2.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header--anime__heading {
+  font-size: 8rem;
+  z-index: 1;
+  font-family: "Sedgwick Ave", cursive;
+  color: #454553;
+}
+
+.header--anime__heading--bg {
+  width: 400px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#9d3327), to(#ebc578));
+  background-image: linear-gradient(to right top, #9d3327, #ebc578);
+}
+
+.anime {
+  background-color: #454553;
 }
 
 .footer {

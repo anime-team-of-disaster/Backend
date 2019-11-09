@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
 }
+
 $bp-1400: 87.5em; //1400px
 $bp-1300: 81.25em; //1300px
 $bp-1200: 75em; //1200px
@@ -44,18 +45,20 @@ body {
 }
 
 .container {
+  //home
   display: grid;
   grid-template-rows: [header] 80vh [end-header] min-content min-content;
   grid-template-columns:
-    1fr [col-start] repeat(8, minmax(min-content, 14rem))
-    [col-end] 1fr;
-  // height: 100vh;
-  // width: 100vw;
-  // overflow-y: scroll;
-  // scroll-behavior: smooth;
-  // justify-content: center;
+    1fr [col-start] repeat(8, minmax(min-content, 14rem)) [col-end] 1fr;
   background-color: $black;
-  // background-image: linear-gradient(to right bottom, #2f3542, #57606f) ;
+
+  //anime
+
+  &--anime {
+    margin-top: 6rem;
+  }
+
+
 }
 
 .main {

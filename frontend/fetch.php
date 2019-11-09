@@ -18,7 +18,7 @@ if(isset($_POST["query"]))
 else
 {
 	$query = "
-	SELECT * FROM anime ORDER BY TITLE";
+	SELECT * FROM anime ORDER BY TITLE LIMIT 0,3";
 }
 $result = mysqli_query($connect, $query);
 
@@ -34,15 +34,19 @@ if(mysqli_num_rows($result) > 0)
 	// 						<th>RATING</th>
 	// 						<th>EPISODES</th>
 	// 					</tr>';
-	while($row = mysqli_fetch_array($result))
+
+	// $counter = 0;
+	// $max = 2;
+	while($row = mysqli_fetch_array($result) )
 	{
 		$output .= '
 			
-				<div class="results__item"><a href="category.php" class="results__item--link"><div class="results__item--img"></div>'.$row["TITLE"].'</a></div>
+				<div class="results__item"><a href="info-watch.php" class="results__item--link"><div class="results__item--img"></div>'.$row["TITLE"].'</a></div>
 				
 			
 		';
 	}
+	// $row++;
 	echo $output;
 }
 else
