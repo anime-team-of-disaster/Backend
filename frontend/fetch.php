@@ -41,7 +41,7 @@ if(mysqli_num_rows($result) > 0)
 	{
 		$output .= '
 			
-				<div class="results__item"><a href="info-watch.php" class="results__item--link"><div class="results__item--img"></div>'.$row["TITLE"].'</a></div>
+				<div class="results__item"><a href="../'.$row["TITLE"].'/index.php" class="results__item--link"><div class="results__item--img"></div>'.$row["TITLE"].'</a></div>
 				
 			
 		';

@@ -1,7 +1,7 @@
 <?php
 echo '
 <div class="navigation" id="navbar">
-<a href="#home"><img class="navigation__logo" src="../img/logo.png" alt="Moje-anime-logo" /></a>
+<a href="../index.php"><img class="navigation__logo" src="../img/logo.png" alt="Moje-anime-logo" /></a>
 <nav class="navigation__nav">
   <ul class="navigation__list">
     <li class="navigation__item">

@@ -17,7 +17,7 @@
 
 <body class="container">
   <?php 
-  include 'navigation.php';
+  include 'components/navigation.php';
   ?>
   <!-- header -->
   <header class="header" id="header">
@@ -41,11 +41,11 @@
   <!-- main  -->
   <main class="main">
   <!-- popular slider -->
-    <?php include "popular-slider.php" ?>
+    <?php include "home/popular-slider.php" ?>
     <!-- news (banner) -->
-    <?php include "news-banner.php" ?>
+    <?php include "home/news-banner.php" ?>
 
-    <?php include "new-slider.php" ?>
+    <?php include "home/new-slider.php" ?>
 
   </main>
   <!-- reklama-->
@@ -85,13 +85,13 @@
       </div>
     </aside> -->
   <!-- koniec reklamy-->
- <?php include "footer.php"?>
+ <?php include "components/footer.php"?>
 
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
 
   
-  <script src="../js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
