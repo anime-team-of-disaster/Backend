@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php $hero = get_field('hero');?>
 <head>
   <meta charset="UTF-8" />
 
@@ -11,13 +11,12 @@
   <!-- header -->
   <header class="header">
     <div class="header__container">
-      <h1 class="header__heading">Znajdz swoje anime</h1>
+      <h1 class="header__heading"><?php echo $hero['wyszukiwarka_text'];?></h1>
       <form action="" class="form">
         <input type="text" placeholder="Wyszukaj animu" class="form__input" name="search_text" id="search_text"  autocomplete="off" <!--onclick="runTest()"--> 
     
        <!--    //TODO POWIADOMIENIE ajax dziła na clicku   -->
-    
-        <input type="button" value="szukaj" class="btn form__btn" />
+        <input type="button" value="<?php echo $hero['link_text'];?>" class="btn form__btn" />
         <div class="results" id="result">
 
         </div>

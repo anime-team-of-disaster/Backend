@@ -1,13 +1,14 @@
 <?php
-get_header();?>
+get_header();
 ?>
+<?php $hero = get_field('hero');?>
 
 
   <!-- main  -->
   <main class="main">
   <!-- popular slider -->
   <section id="popular" class="u--margin-bottom-10">
-      <h2 class="main__heading">Popularne anime</h2>
+      <h2 class="main__heading"><?php echo $hero['popularne_text'];?></h2>
       <!-- Slider main container -->
       <div class="swiper-container">
         <!-- Additional required wrapper -->
@@ -17,7 +18,7 @@ get_header();?>
             <div class="swiper-slide__box">
               <img class="swiper__img" src="<?php bloginfo('template_directory');?>/img/sao-card.jpg" alt="sao" />
               <div class="swiper__img--shadow">
-                <button class="swiper__img__btn btn">Sprawdź</button>
+                <button class="swiper__img__btn btn"><?php echo $hero['popularne_btn_text'];?></button>
               </div>
             </div>
           </div>
@@ -25,7 +26,7 @@ get_header();?>
             <div class="swiper-slide__box">
               <img class="swiper__img" src="<?php bloginfo('template_directory');?>/img/sao-card.jpg" alt="sao" />
               <div class="swiper__img--shadow">
-                <button class="swiper__img__btn btn">Sprawdź</button>
+                <button class="swiper__img__btn btn"><?php echo $hero['popularne_btn_text'];?></button>
               </div>
             </div>
           </div>
@@ -33,7 +34,7 @@ get_header();?>
             <div class="swiper-slide__box">
               <img class="swiper__img" src="<?php bloginfo('template_directory');?>/img/sao-card.jpg" alt="sao" />
               <div class="swiper__img--shadow">
-                <button class="swiper__img__btn btn">Sprawdź</button>
+                <button class="swiper__img__btn btn"><?php echo $hero['popularne_btn_text'];?></button>
               </div>
             </div>
           </div>
@@ -41,7 +42,7 @@ get_header();?>
             <div class="swiper-slide__box">
               <img class="swiper__img" src="<?php bloginfo('template_directory');?>/img/sao-card.jpg" alt="sao" />
               <div class="swiper__img--shadow">
-                <button class="swiper__img__btn btn">Sprawdź</button>
+                <button class="swiper__img__btn btn"><?php echo $hero['popularne_btn_text'];?></button>
               </div>
             </div>
           </div>
@@ -49,7 +50,7 @@ get_header();?>
             <div class="swiper-slide__box">
               <img class="swiper__img" src="<?php bloginfo('template_directory');?>/img/sao-card.jpg" alt="sao" />
               <div class="swiper__img--shadow">
-                <button class="swiper__img__btn btn">Sprawdź</button>
+                <button class="swiper__img__btn btn"><?php echo $hero['popularne_btn_text'];?></button>
               </div>
             </div>
           </div>
@@ -57,7 +58,7 @@ get_header();?>
             <div class="swiper-slide__box">
               <img class="swiper__img" src="<?php bloginfo('template_directory');?>/img/sao-card.jpg" alt="sao" />
               <div class="swiper__img--shadow">
-                <button class="swiper__img__btn btn">Sprawdź</button>
+                <button class="swiper__img__btn btn"><?php echo $hero['popularne_btn_text'];?></button>
               </div>
             </div>
           </div>
@@ -72,7 +73,7 @@ get_header();?>
     </section>
     <!-- news (banner) -->
     <section class="news u--margin-bottom-10" id="news">
-      <h2 class="main__heading">Newsy</h2>
+      <h2 class="main__heading"><?php echo $hero['newsy_text'];?></h2>
       <div class="articles">
         <article class="article">
           <img class="article__img" src="<?php bloginfo('template_directory');?>/img/saoNews.jpg" alt="" />
@@ -84,7 +85,7 @@ get_header();?>
               natus error.
             </p>
             <div class="article__link--box">
-              <a href="" class="article__link ">Czytaj więcej</a>
+              <a href="" class="article__link "><?php echo $hero['newsy_text_btn'];?></a>
             </div>
           </div>
         </article>
@@ -98,7 +99,7 @@ get_header();?>
               natus error.
             </p>
             <div class="article__link--box">
-              <a href="" class="article__link ">Czytaj więcej</a>
+              <a href="" class="article__link "><?php echo $hero['newsy_text_btn'];?></a>
             </div>
           </div>
         </article>
@@ -106,7 +107,7 @@ get_header();?>
     </section>
 
     <section id="new" class="u--margin-bottom-10">
-<h2 class="main__heading">Nowości Anime</h2>
+<h2 class="main__heading"><?php echo $hero['nowosci_text'];?></h2>
 <!-- Slider main container -->
 <div class="swiper-container">
   <!-- Additional required wrapper -->
@@ -116,7 +117,7 @@ get_header();?>
       <div class="swiper-slide__box">
         <img class="swiper__img" src="<?php bloginfo('template_directory');?>/img/sao-card.jpg" alt="sao" />
         <div class="swiper__img--shadow">
-          <button class="swiper__img__btn btn">Sprawdź</button>
+          <button class="swiper__img__btn btn"><?php echo $hero['nowosci_text_btn'];?></button>
         </div>
       </div>
     </div>
@@ -124,7 +125,7 @@ get_header();?>
       <div class="swiper-slide__box">
         <img class="swiper__img" src="<?php bloginfo('template_directory');?>/img/sao-card.jpg" alt="sao" />
         <div class="swiper__img--shadow">
-          <button class="swiper__img__btn btn">Sprawdź</button>
+          <button class="swiper__img__btn btn"><?php echo $hero['nowosci_text_btn'];?></button>
         </div>
       </div>
     </div>
@@ -132,7 +133,7 @@ get_header();?>
       <div class="swiper-slide__box">
         <img class="swiper__img" src="<?php bloginfo('template_directory');?>/img/sao-card.jpg" alt="sao" />
         <div class="swiper__img--shadow">
-          <button class="swiper__img__btn btn">Sprawdź</button>
+          <button class="swiper__img__btn btn"><?php echo $hero['nowosci_text_btn'];?></button>
         </div>
       </div>
     </div>
@@ -140,7 +141,7 @@ get_header();?>
       <div class="swiper-slide__box">
         <img class="swiper__img" src="<?php bloginfo('template_directory');?>/img/sao-card.jpg" alt="sao" />
         <div class="swiper__img--shadow">
-          <button class="swiper__img__btn btn">Sprawdź</button>
+          <button class="swiper__img__btn btn"><?php echo $hero['nowosci_text_btn'];?></button>
         </div>
       </div>
     </div>
@@ -148,7 +149,7 @@ get_header();?>
       <div class="swiper-slide__box">
         <img class="swiper__img" src="<?php bloginfo('template_directory');?>/img/sao-card.jpg" alt="sao" />
         <div class="swiper__img--shadow">
-          <button class="swiper__img__btn btn">Sprawdź</button>
+          <button class="swiper__img__btn btn"><?php echo $hero['nowosci_text_btn'];?></button>
         </div>
       </div>
     </div>
@@ -156,7 +157,7 @@ get_header();?>
       <div class="swiper-slide__box">
         <img class="swiper__img" src="<?php bloginfo('template_directory');?>/img/sao-card.jpg" alt="sao" />
         <div class="swiper__img--shadow">
-          <button class="swiper__img__btn btn">Sprawdź</button>
+          <button class="swiper__img__btn btn"><?php echo $hero['nowosci_text_btn'];?></button>
         </div>
       </div>
     </div>
