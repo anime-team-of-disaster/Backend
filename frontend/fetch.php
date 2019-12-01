@@ -5,8 +5,8 @@ if(isset($_POST["query"]))
 {
 	$search = mysqli_real_escape_string($connect, $_POST["query"]);
 	$query = "
-	SELECT * FROM user_list
-	WHERE ANIME LIKE '%".$search."%'
+	SELECT * FROM anime
+	WHERE TITLE LIKE '%".$search."%'
 	
     ";
     
@@ -18,34 +18,35 @@ if(isset($_POST["query"]))
 else
 {
 	$query = "
-	SELECT * FROM user_list ORDER BY USER_NAME";
+	SELECT * FROM anime ORDER BY TITLE LIMIT 0,3";
 }
 $result = mysqli_query($connect, $query);
 
 // if(isset)
 if(mysqli_num_rows($result) > 0)
 {
-	$output .= '<div class="table-responsive">
-					<table class="table table bordered">
-						<tr>
-							<th>ANIME</th>
-							<th>USER</th>
-							<th>PASSWORD</th>
-							<th>STATUS</th>
-							<th>RATING</th>
-						</tr>';
-	while($row = mysqli_fetch_array($result))
+	// $output .= '<div class="table-responsive">
+	// 				<table class="table table bordered">
+	// 					<tr>
+	// 						<th>TITLE</th>
+	// 						<th>CREATOR</th>
+	// 						<th>TYPE</th>
+	// 						<th>RATING</th>
+	// 						<th>EPISODES</th>
+	// 					</tr>';
+
+	// $counter = 0;
+	// $max = 2;
+	while($row = mysqli_fetch_array($result) )
 	{
 		$output .= '
-			<tr>
-				<td>'.$row["ANIME"].'</td>
-				<td>'.$row["USER_NAME"].'</td>
-				<td>'.$row["PASSWORD"].'</td>
-				<td>'.$row["STATUS"].'</td>
-				<td>'.$row["RATING"].'</td>
-			</tr>
+			
+				<div class="results__item"><a href="../'.$row["TITLE"].'/index.php" class="results__item--link"><div class="results__item--img"></div>'.$row["TITLE"].'</a></div>
+				
+			
 		';
 	}
+	// $row++;
 	echo $output;
 }
 else

@@ -37,6 +37,11 @@ body {
   background-color: #454553;
 }
 
+.container--anime {
+  margin-top: 6rem;
+  background-color: #454553;
+}
+
 .main {
   grid-column: col-start / col-end;
   display: -webkit-box;
@@ -468,16 +473,35 @@ body {
 .results {
   display: none;
   position: absolute;
-  width: 800px;
-  height: 300px;
   top: 100%;
   left: 0;
   z-index: 1000;
   background-color: #fff;
 }
 
+.results__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.results__item--link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.6rem;
+}
+
 .active-form {
-  display: block !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
 }
 
 .btn {
@@ -828,6 +852,63 @@ a {
 
 .u--margin-bottom-10 {
   margin-bottom: 10rem;
+}
+
+.header--anime {
+  width: 100%;
+  height: 30vh;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(0, 0, 0, 0.8)), to(rgba(51, 51, 51, 0.8))), url("../naruto/naruto-bg2.jpg");
+  background-image: linear-gradient(to right top, rgba(0, 0, 0, 0.8), rgba(51, 51, 51, 0.8)), url("../naruto/naruto-bg2.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header--anime__heading {
+  font-size: 12rem;
+  z-index: 1;
+  font-family: "Sedgwick Ave", cursive;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#9d3327), to(#ebc578));
+  background-image: linear-gradient(to right top, #9d3327, #ebc578);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-filter: drop-shadow(-6px 3px #333);
+          filter: drop-shadow(-6px 3px #333);
+  -webkit-transform: skew(-15deg, -2deg);
+          transform: skew(-15deg, -2deg);
+  letter-spacing: 10px;
+}
+
+.anime {
+  background-color: #454553;
+}
+
+.anime__heading {
+  font-family: "lato", sans-serif;
+  font-weight: light;
+  letter-spacing: 5px;
+  font-size: 6.5rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(#ddcda6), to(#f2c25f));
+  background: linear-gradient(to right bottom, #ddcda6, #f2c25f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-filter: drop-shadow(-3px 3px #333);
+          filter: drop-shadow(-3px 3px #333);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.anime__season {
+  width: 100%;
 }
 
 .footer {
