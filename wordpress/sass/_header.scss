@@ -1,0 +1,116 @@
+.header {
+  background-image: linear-gradient(to right top,
+      rgba(157, 51, 39, 0.6),
+      rgba(235, 197, 120, 0.4)),
+    url(../img/header-bg.jpg);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  grid-column: -1 /1;
+  grid-row: header / endheader;
+  // background-attachment: fixed;
+  // display: grid;
+  // grid-template-columns: 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
+  // grid-template-rows: 80vh;
+
+  &__heading {
+    font-size: 7rem;
+    margin-bottom: 3rem;
+    color: #fff;
+    text-shadow: 1px 5px 10px rgba(0, 0, 0, 0.6);
+
+    @media screen and (max-width: $bp-400) {
+      font-size: 5rem;
+      text-align: center;
+    }
+
+    @media screen and (max-width: $bp-800) and (orientation: landscape) {
+      font-size: 5rem;
+      text-align: center;
+    }
+
+    @media screen and (max-width: $bp-600) and (orientation: landscape) {
+      font-size: 4rem;
+      text-align: center;
+    }
+  }
+
+  &__container {
+    padding: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+
+    @media screen and (max-width: $bp-1400) {
+      left: 35%;
+    }
+
+    @media screen and (max-width: $bp-600) {
+      left: 50%;
+    }
+
+    // @media screen and (max-width: $bp-1000) {
+    //   left: 40%;
+    // }
+    @media screen and (max-width: $bp-400) {
+      // // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &__input {
+    font-size: 1.8rem;
+    padding: 0.6rem 1rem;
+    transition: all 0.3s;
+    border-radius: 0px;
+    border: 2px solid $black;
+    background-color: $black;
+    color: #fff;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+
+    @media screen and (max-width: $bp-400) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    &:focus {
+      border: 2px solid $red;
+      box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  &__btn {
+    font-size: 2rem;
+    text-transform: capitalize;
+    background-image: linear-gradient(to right bottom, #db6338);
+  }
+}
+
+.results {
+  display: none;
+  position: absolute;
+  width: 800px;
+  height: 300px;
+  // top: 10%;
+  // bottom: -0;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.active-form {
+  display: block !important;
+}

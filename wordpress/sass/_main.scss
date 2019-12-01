@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+$bp-1400: 87.5em; //1400px
+$bp-1300: 81.25em; //1300px
+$bp-1200: 75em; //1200px
+$bp-1100: 68.75em; // 1100px
+$bp-1000: 62.5em; //1000px
+$bp-800: 50em; //800px
+$bp-600: 37.5em; // 600px
+$bp-400: 25em; //400px
+
+// $primaryBlack: #2f3542;
+$dark: #2f3542;
+$black: #454553;
+// $blackLight: #57606f;
+$blu: #d8e9f0;
+$bluw: #ebc579;
+// $primaryRed: #ff4757;
+$red: #f73859;
+
+$redLight: #ff6b81;
+$btRed: #fb2b3c;
+$btnRedLight: #fd3546;
+
+html {
+  font-size: 62.5%; // 10px
+  box-sizing: border-box;
+
+  @media (max-width: $bp-1000) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  // height: 2000px;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: [header] 80vh [end-header] min-content min-content;
+  grid-template-columns:
+    1fr [col-start] repeat(8, minmax(min-content, 14rem))
+    [col-end] 1fr;
+  // height: 100vh;
+  // width: 100vw;
+  // overflow-y: scroll;
+  // scroll-behavior: smooth;
+  // justify-content: center;
+  background-color: $black;
+  // background-image: linear-gradient(to right bottom, #2f3542, #57606f) ;
+}
+
+.main {
+  grid-column: col-start / col-end;
+
+  // display: grid;
+  display: flex;
+  // justify-content
+  flex-direction: column;
+
+  // grid-template-columns:
+  //   [main-start] repeat(8, minmax(auto-fit, 14rem))
+  //   [main-end] 1fr;
+
+  // grid-template-rows: repeat(2, min-content);
+
+  &__heading {
+    // font-family: "Kaushan Script", cursive;
+    font-family: "Sedgwick Ave", cursive;
+    font-weight: light;
+    letter-spacing: 10px;
+    font-size: 6.5rem;
+    text-align: center;
+    justify-content: center;
+    padding: 5rem 0;
+    grid-column: main-start / main-end;
+    background: linear-gradient(to right bottom, #ddcda6, #f2c25f);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(-3px 3px #333);
+    position: relative;
+
+    &--news {
+      widows: 100%;
+    }
+  }
+}

@@ -1,0 +1,110 @@
+// .kurwa {
+//   grid-column: col-start2 / col-end2;
+// }
+.swiper {
+  &-container {
+    // width: 100%;
+    width: 1200px;
+    height: 400px;
+    @media screen and (max-width: $bp-1200) {
+      width: 1000px;
+    }
+
+    @media screen and (max-width: $bp-1000) {
+      width: 800px;
+      height: 350px;
+    }
+    @media screen and (max-width: $bp-800) {
+      width: 600px;
+      height: 400px;
+    }
+    @media screen and (max-width: $bp-600) {
+      width: 280px;
+      height: 400px;
+    }
+  }
+  &-slide {
+    position: relative;
+    height: 390px;
+    @media screen and (max-width: $bp-1000) {
+      height: 340px;
+    }
+    @media screen and (max-width: $bp-800) {
+      height: 390px;
+    }
+    @media screen and (max-width: $bp-600) {
+      height: 390px;
+    }
+
+    &__box {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      // background-color: rgba(34, 34, 34, 0.85);
+      background-color: $dark;
+
+      border-radius: 5px;
+      // border: 4px solid $primaryRed;
+      // z-index: 100;
+      box-shadow: 5px 5px 0px $bluw;
+
+      // @media screen and (max-width: $bp-600) {
+      //   box-shadow: 0px 5px 0px $red;
+      // }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 75%;
+    height: 70%;
+    border-radius: 5px;
+
+    // position: relative;
+
+    &--shadow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 75%;
+      height: 70%;
+      transform: translate(-50%, -60%);
+      background-color: rgba(74, 160, 213, 0.1);
+      border-radius: 3px;
+      // border: 8px solid $primaryBlack;
+    }
+
+    &__btn {
+      position: absolute;
+      // top: 100%;
+      bottom: -25%;
+      width: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      background-image: linear-gradient(to right bottom, #db6338);
+
+      // transform: translate(0%, 0%);
+    }
+  }
+
+  &-button-next {
+    color: #db6338;
+    // width: 100px;
+    font-weight: bold;
+  }
+  &-button-prev {
+    color: #db6338;
+    font-weight: bold;
+    // text-shadow: 10px 6px 20px rgba(0, 0, 0, 1);
+  }
+  &-pagination-bullet-active {
+    // background: #ff4757;
+    background: white;
+  }
+}

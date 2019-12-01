@@ -1,0 +1,264 @@
+// Desktop FHD+
+.navigation {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 60px;
+  background-color: $black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0);
+  z-index: 1000;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+
+  &__logo {
+    // display: none;
+    // position: absolute;
+    // top: 0;
+    // left: 50px;
+    margin: 8rem 0 0 -2rem;
+    width: 240px;
+    height: 140px;
+
+    // @media screen and (max-width: $bp-1400) {
+    //   margin: 1rem 0 0 0rem;
+    //   width: 100px;
+    //   height: 60px;
+    // }
+
+    @media screen and (max-width: $bp-1000) {
+      margin: 5rem 0 0 -3rem;
+      width: 175px;
+      height: 100px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: $bp-1000) {
+      position: absolute;
+      height: 100vh;
+      top: 100%;
+      background-color: $black;
+      width: 40vw;
+      right: 0;
+      flex-direction: column;
+
+      transform: translateX(30vw);
+      visibility: hidden;
+      // opacity: 0;
+      transition: all 0.3s;
+
+      // justify-content: space-evenly;
+    }
+  }
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+    @media screen and (max-width: $bp-1000) {
+      // position: absolute;
+      // top: 0;
+      flex-direction: column;
+      width: 100%;
+    }
+    @media (max-width: $bp-1000) and (orientation: landscape) {
+      // justify-content: center;
+      height: 80%;
+    }
+  }
+
+  &__item {
+    margin-right: 10rem;
+
+    @media screen and (max-width: $bp-1400) {
+      margin-right: 5rem;
+    }
+
+    @media screen and (max-width: $bp-1200) {
+      margin-right: 2.5rem;
+    }
+    @media screen and (max-width: $bp-1100) {
+      margin-right: 2rem;
+    }
+    @media screen and (max-width: $bp-1000) {
+      margin-right: 0;
+      margin: 1.5rem 0;
+
+      display: flex;
+    }
+
+    @media (max-width: $bp-800) and (orientation: landscape) {
+      margin: 1rem;
+    }
+  }
+
+  &__item:nth-of-type(4) {
+    margin-right: 5rem;
+    @media screen and (max-width: $bp-1400) {
+      margin-right: 5rem;
+    }
+    @media screen and (max-width: $bp-1100) {
+      margin-right: 5rem;
+    }
+    @media screen and (max-width: $bp-1000) {
+      margin-right: 0;
+      margin-bottom: 15rem;
+    }
+    @media screen and (max-width: $bp-1000) and (orientation: landscape) {
+      margin-right: 0;
+    }
+    @media (max-width: $bp-800) and (orientation: landscape) {
+      margin-bottom: 0;
+    }
+  }
+  // .last {
+  //   padding-bottom: 100rem !important;
+  // }
+  &__link {
+    font-size: 1.7rem;
+    color: #fff;
+    text-decoration: none;
+    // width: 100%;
+    // height: 100%;
+    padding: 1rem 2rem;
+    // background-color: #444;
+    position: relative;
+    @media screen and (max-width: $bp-1000) {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+      padding: 1rem;
+      font-size: 3rem;
+    }
+    @media screen and (max-width: $bp-1000) and (orientation: landscape) {
+      font-size: 1.6rem;
+    }
+    @media screen and (max-width: $bp-600) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: $bp-1000) and (orientation: landscape) {
+      margin-bottom: 0;
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  &__link::after {
+    content: "";
+    border-bottom: 2px solid $bluw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    transition: width 0.3s;
+    @media screen and (max-width: $bp-1000) {
+      display: none;
+    }
+  }
+}
+.navigation__link:hover::after {
+  //   transform: translateY(-50%);
+  width: 100%;
+}
+.menu {
+  display: none;
+  @media screen and (max-width: $bp-1000) {
+    display: block;
+  }
+}
+
+// .register__btn {
+//   background-image: linear-gradient(to right bottom, #ff4757, #ff6b81);
+//   @media (max-width: $bp-600) and (orientation: landscape) {
+//     // justify-content: center;
+//     margin-top: 2rem !important;
+//     font-size: 1.5rem;
+//   }
+// }
+// .login__btn {
+//   padding: 0.8rem 3rem !important;
+//   border: solid 1px $red !important;
+//   @media screen and (max-width: $bp-1000) {
+//     margin-bottom: 10rem !important;
+//     border: solid 1px $red !important;
+//   }
+
+//   @media (max-width: $bp-600) and (orientation: landscape) {
+//     // justify-content: center;
+//     // margin-top: 2rem !important;
+//     font-size: 1.5rem;
+//   }
+// }
+.menu {
+  width: 40px;
+  height: 35px;
+  background-color: transparent;
+  margin-right: 2rem;
+  border: none;
+  outline: none;
+  position: relative;
+
+  &__span {
+    display: block;
+    width: 40px;
+    height: 5px;
+    // background-color: #000;
+    border-radius: 3px;
+    background-image: linear-gradient(to top right, $bluw);
+    transition: all 0.3s;
+    // background-image: linear-gradient(
+    //   to bottom right,
+    //   $orange,
+    //   $primaryRed,
+    //   $blackLight
+    // );
+
+    &::before {
+      content: "";
+      display: block;
+      transform: translateY(-12px);
+      border-radius: 3px;
+      width: 40px;
+      height: 5px;
+      z-index: 10;
+      background-image: linear-gradient(to top right, $bluw);
+      transition: all 0.3s;
+      // background-image: linear-gradient(
+      //   to bottom right,
+      //   $orange,
+      //   $primaryRed,
+      //   $blackLight
+      // );
+      // background-color: #000;
+      // margin-right: 2rem;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      transform: translateY(7px);
+      border-radius: 3px;
+      width: 40px;
+      height: 5px;
+      z-index: 10;
+      background-image: linear-gradient(to top right, $bluw);
+      // background-image: linear-gradient(
+      //   to bottom right,
+      //   $orange,
+      //   $primaryRed,
+      //   $blackLight
+      // );
+      // background-color: $redLight;
+      // margin-right: 2rem;
+      transition: all 0.3s;
+    }
+  }
+}
