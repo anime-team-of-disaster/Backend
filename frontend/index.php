@@ -48,8 +48,9 @@
     <?php include "home/new-slider.php" ?>
 
   </main>
+
   <!-- reklama-->
-  <aside class="advertisement advertisement__left">
+  <!-- <aside class="advertisement advertisement__left">
       <div class="advertisment__one">
         <img
           class="advertisement__img"
@@ -68,7 +69,7 @@
   <!-- koniec reklamy-->
 
   <!-- reklama-->
-<aside class="advertisement advertisement__right">
+<!-- <aside class="advertisement advertisement__right">
       <div class="advertisment__one">
         <img
           class="advertisement__img"
@@ -83,7 +84,7 @@
           alt="advertisement"
         />
       </div>
-    </aside>
+    </aside> -->
   <!-- koniec reklamy -->
  <?php include "components/footer.php"?>
 
