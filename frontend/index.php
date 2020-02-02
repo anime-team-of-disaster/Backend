@@ -49,7 +49,7 @@
 
   </main>
   <!-- reklama-->
-  <!-- <aside class="advertisement advertisement__left">
+  <aside class="advertisement advertisement__left">
       <div class="advertisment__one">
         <img
           class="advertisement__img"
@@ -68,7 +68,7 @@
   <!-- koniec reklamy-->
 
   <!-- reklama-->
-  <!-- <aside class="advertisement advertisement__right">
+<aside class="advertisement advertisement__right">
       <div class="advertisment__one">
         <img
           class="advertisement__img"
@@ -83,8 +83,8 @@
           alt="advertisement"
         />
       </div>
-    </aside> -->
-  <!-- koniec reklamy-->
+    </aside>
+  <!-- koniec reklamy -->
  <?php include "components/footer.php"?>
 
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
